@@ -19,6 +19,8 @@ export class WalletComponent implements OnInit {
 
   constructor (private readonly router: Router, private readonly walletService: WalletService, private readonly ngZone: NgZone) { }
 
+  key = "6e1416f0-3ea1-4b05-a722-d4dc23ae26e5";
+
   ngOnInit () {
     this.walletService.get().subscribe((balance) => {
       this.balance = parseFloat(balance).toFixed(2)
