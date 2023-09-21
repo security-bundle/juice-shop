@@ -22,7 +22,7 @@ export class DataExportComponent implements OnInit {
   public confirmation: any
   public error: any
   public lastSuccessfulTry: any
-  public presenceOfCaptcha: boolean = false
+  public presenceOfCaptcha = false
   public userData: any
 
   constructor (public sanitizer: DomSanitizer, private readonly imageCaptchaService: ImageCaptchaService, private readonly dataSubjectService: DataSubjectService) { }

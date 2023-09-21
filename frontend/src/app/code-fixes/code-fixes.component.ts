@@ -21,20 +21,20 @@ export class CodeFixesComponent implements OnInit, DoCheck {
   }
 
   @Input('snippet')
-  public snippet: string = ''
+  public snippet = ''
 
   @Input('fixes')
   public fixes: string[] = []
 
   @Input('format')
-  public format: string = 'SideBySide'
+  public format = 'SideBySide'
 
   @Output('changeFix')
   public emitFix = new EventEmitter<number>()
 
   @ViewChild('codeComponent', { static: false }) codeComponent: NgxTextDiffComponent
 
-  public selectedFix: number = 0
+  public selectedFix = 0
   public randomFixes: RandomFixes[] = []
 
   shuffle () {

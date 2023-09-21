@@ -36,34 +36,34 @@ export class ScoreBoardComponent implements OnInit, AfterViewInit {
   public displayedDifficulties: number[] = [1]
   public availableChallengeCategories: string[] = []
   public displayedChallengeCategories: string[] = []
-  public toggledMajorityOfDifficulties: boolean = false
-  public toggledMajorityOfCategories: boolean = true
-  public showSolvedChallenges: boolean = true
-  public numDisabledChallenges: number = 0
-  public showDisabledChallenges: boolean = false
-  public showOnlyTutorialChallenges: boolean = false
-  public restrictToTutorialsFirst: boolean = false
-  public allTutorialsCompleted: boolean = false
-  public isLastTutorialsTier: boolean = false
-  public tutorialsTier: number = 1
+  public toggledMajorityOfDifficulties = false
+  public toggledMajorityOfCategories = true
+  public showSolvedChallenges = true
+  public numDisabledChallenges = 0
+  public showDisabledChallenges = false
+  public showOnlyTutorialChallenges = false
+  public restrictToTutorialsFirst = false
+  public allTutorialsCompleted = false
+  public isLastTutorialsTier = false
+  public tutorialsTier = 1
   public disabledEnv?: string
   public displayedColumns = ['name', 'difficulty', 'description', 'category', 'tags', 'status']
   public offsetValue = ['100%', '100%', '100%', '100%', '100%', '100%']
-  public allowRepeatNotifications: boolean = false
-  public showChallengeHints: boolean = true
-  public showVulnerabilityMitigations: boolean = true
-  public codingChallengesEnabled: string = 'solved'
-  public showHackingInstructor: boolean = true
+  public allowRepeatNotifications = false
+  public showChallengeHints = true
+  public showVulnerabilityMitigations = true
+  public codingChallengesEnabled = 'solved'
+  public showHackingInstructor = true
   public challenges: Challenge[] = []
-  public percentChallengesSolved: string = '0'
-  public percentCodingChallengesSolved: string = '0'
+  public percentChallengesSolved = '0'
+  public percentCodingChallengesSolved = '0'
   public solvedChallengesOfDifficulty: Challenge[][] = [[], [], [], [], [], []]
   public totalChallengesOfDifficulty: Challenge[][] = [[], [], [], [], [], []]
-  public showContributionInfoBox: boolean = true
-  public questionnaireUrl: string = 'https://forms.gle/2Tr5m1pqnnesApxN8'
-  public appName: string = 'OWASP Juice Shop'
-  public localBackupEnabled: boolean = true
-  public showFeedbackButtons: boolean = true
+  public showContributionInfoBox = true
+  public questionnaireUrl = 'https://forms.gle/2Tr5m1pqnnesApxN8'
+  public appName = 'OWASP Juice Shop'
+  public localBackupEnabled = true
+  public showFeedbackButtons = true
 
   constructor (private readonly configurationService: ConfigurationService, private readonly challengeService: ChallengeService, private readonly codeSnippetService: CodeSnippetService, private readonly sanitizer: DomSanitizer, private readonly ngZone: NgZone, private readonly io: SocketIoService, private readonly spinner: NgxSpinnerService, private readonly translate: TranslateService, private readonly localBackupService: LocalBackupService, private readonly dialog: MatDialog, private readonly route: ActivatedRoute) {
   }

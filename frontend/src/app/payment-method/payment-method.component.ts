@@ -24,7 +24,7 @@ dom.watch()
 
 export class PaymentMethodComponent implements OnInit {
   @Output() emitSelection = new EventEmitter()
-  @Input('allowDelete') public allowDelete: boolean = false
+  @Input('allowDelete') public allowDelete = false
   public displayedColumns = ['Number', 'Name', 'Expiry']
   public nameControl: UntypedFormControl = new UntypedFormControl('', [Validators.required])
   public numberControl: UntypedFormControl = new UntypedFormControl('', [Validators.required, Validators.min(1000000000000000), Validators.max(9999999999999999)]) // eslint-disable-line no-loss-of-precision
@@ -37,7 +37,7 @@ export class PaymentMethodComponent implements OnInit {
   public dataSource
   public monthRange: any[]
   public yearRange: any[]
-  public cardsExist: boolean = false
+  public cardsExist = false
   public paymentId: any = undefined
 
   constructor (public paymentService: PaymentService, private readonly translate: TranslateService, private readonly snackBarHelperService: SnackBarHelperService) { }

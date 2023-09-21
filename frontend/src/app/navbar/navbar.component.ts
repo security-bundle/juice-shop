@@ -52,15 +52,15 @@ dom.watch()
   styleUrls: ['./navbar.component.scss']
   })
 export class NavbarComponent implements OnInit {
-  public userEmail: string = ''
+  public userEmail = ''
   public languages: any = []
-  public selectedLanguage: string = 'placeholder'
-  public version: string = ''
-  public applicationName: string = 'OWASP Juice Shop'
-  public showGitHubLink: boolean = true
-  public logoSrc: string = 'assets/public/images/JuiceShop_Logo.png'
-  public scoreBoardVisible: boolean = false
-  public shortKeyLang: string = 'placeholder'
+  public selectedLanguage = 'placeholder'
+  public version = ''
+  public applicationName = 'OWASP Juice Shop'
+  public showGitHubLink = true
+  public logoSrc = 'assets/public/images/JuiceShop_Logo.png'
+  public scoreBoardVisible = false
+  public shortKeyLang = 'placeholder'
   public itemTotal = 0
 
   @Output() public sidenavToggle = new EventEmitter()

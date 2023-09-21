@@ -13,7 +13,7 @@ import { Router } from '@angular/router'
   })
 export class AddressSelectComponent {
   public addressId: any = undefined
-  public showNextButton: boolean = true
+  public showNextButton = true
 
   constructor (private readonly router: Router, private readonly ngZone: NgZone) {}
 

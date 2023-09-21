@@ -21,9 +21,9 @@ dom.watch()
   styleUrls: ['./purchase-basket.component.scss']
   })
 export class PurchaseBasketComponent implements OnInit {
-  @Input('allowEdit') public allowEdit: boolean = false
-  @Input('displayTotal') public displayTotal: boolean = false
-  @Input('totalPrice') public totalPrice: boolean = true
+  @Input('allowEdit') public allowEdit = false
+  @Input('displayTotal') public displayTotal = false
+  @Input('totalPrice') public totalPrice = true
   @Output() emitTotal = new EventEmitter()
   @Output() emitProductCount = new EventEmitter()
   public tableColumns = ['image', 'product', 'quantity', 'price']

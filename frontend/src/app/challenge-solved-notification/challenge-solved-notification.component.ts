@@ -33,8 +33,8 @@ interface ChallengeSolvedNotification {
   })
 export class ChallengeSolvedNotificationComponent implements OnInit {
   public notifications: ChallengeSolvedNotification[] = []
-  public showCtfFlagsInNotifications: boolean = false
-  public showCtfCountryDetailsInNotifications: string = 'none'
+  public showCtfFlagsInNotifications = false
+  public showCtfCountryDetailsInNotifications = 'none'
   public countryMap?: any
 
   constructor (private readonly ngZone: NgZone, private readonly configurationService: ConfigurationService, private readonly challengeService: ChallengeService, private readonly countryMappingService: CountryMappingService, private readonly translate: TranslateService, private readonly cookieService: CookieService, private readonly ref: ChangeDetectorRef, private readonly io: SocketIoService) {
@@ -83,7 +83,7 @@ export class ChallengeSolvedNotificationComponent implements OnInit {
     })
   }
 
-  closeNotification (index: number, shiftKey: boolean = false) {
+  closeNotification (index: number, shiftKey = false) {
     if (shiftKey) {
       this.ngZone.runOutsideAngular(() => {
         this.io.socket().emit('verifyCloseNotificationsChallenge', this.notifications)

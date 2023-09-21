@@ -27,7 +27,7 @@ async function parseExifData (path: string): Promise<any> {
 
 describe('blueprint', () => {
   const products = config.get<Product[]>('products')
-  let pathToImage: string = 'assets/public/images/products/'
+  let pathToImage = 'assets/public/images/products/'
 
   describe('checkExifData', () => {
     it('should contain properties from exifForBlueprintChallenge', async () => {
