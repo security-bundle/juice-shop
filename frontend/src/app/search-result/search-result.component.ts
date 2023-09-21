@@ -52,7 +52,7 @@ export class SearchResultComponent implements OnDestroy, AfterViewInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator | null = null
   private readonly productSubscription?: Subscription
   private routerSubscription?: Subscription
-  public breakpoint: number = 6
+  public breakpoint = 6
   public emptyState = false
 
   constructor (private readonly deluxeGuard: DeluxeGuard, private readonly dialog: MatDialog, private readonly productService: ProductService,

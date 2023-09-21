@@ -13,7 +13,7 @@ import { ConfigurationService } from '../Services/configuration.service'
   styleUrls: ['./privacy-policy.component.scss']
   })
 export class PrivacyPolicyComponent implements OnInit {
-  public applicationName: string = 'OWASP Juice Shop'
+  public applicationName = 'OWASP Juice Shop'
   public privacyContactEmail!: string
   public applicationUrl!: string
 

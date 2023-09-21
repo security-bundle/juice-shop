@@ -29,7 +29,7 @@ export class OrderCompletionComponent implements OnInit {
   public deliveryPrice = 0
   public promotionalDiscount = 0
   public address: any
-  public tweetText: string = 'I just purchased'
+  public tweetText = 'I just purchased'
 
   constructor (private readonly configurationService: ConfigurationService, private readonly addressService: AddressService, private readonly trackOrderService: TrackOrderService, public activatedRoute: ActivatedRoute, private readonly basketService: BasketService) { }
 

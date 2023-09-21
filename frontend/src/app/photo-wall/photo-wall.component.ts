@@ -22,7 +22,7 @@ dom.watch()
   styleUrls: ['./photo-wall.component.scss']
   })
 export class PhotoWallComponent implements OnInit {
-  public emptyState: boolean = true
+  public emptyState = true
   public imagePreview: string
   public form: UntypedFormGroup = new UntypedFormGroup({
     image: new UntypedFormControl('', { validators: [Validators.required], asyncValidators: [mimeType] }),

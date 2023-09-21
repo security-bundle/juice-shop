@@ -37,7 +37,7 @@ export interface Order {
 export class OrderHistoryComponent implements OnInit {
   public tableColumns = ['product', 'price', 'quantity', 'total price', 'review']
   public orders: Order[] = []
-  public emptyState: boolean = true
+  public emptyState = true
 
   constructor (private readonly router: Router, private readonly dialog: MatDialog, private readonly orderHistoryService: OrderHistoryService, private readonly basketService: BasketService, private readonly productService: ProductService, private readonly ngZone: NgZone) { }
 

@@ -25,7 +25,7 @@ export class AddressComponent implements OnInit {
   @Output() emitSelection = new EventEmitter()
   @Input('allowEdit') public allowEdit: Boolean = false
   @Input('addNewAddressDiv') public addNewAddressDiv: Boolean = true
-  @Input('showNextButton') public showNextButton: boolean = false
+  @Input('showNextButton') public showNextButton = false
   public addressId: any = undefined
   public displayedColumns = ['Name', 'Address', 'Country']
   selection = new SelectionModel<Element>(false, [])

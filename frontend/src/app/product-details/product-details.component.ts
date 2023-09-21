@@ -25,7 +25,7 @@ dom.watch()
   styleUrls: ['./product-details.component.scss']
   })
 export class ProductDetailsComponent implements OnInit, OnDestroy {
-  public author: string = 'Anonymous'
+  public author = 'Anonymous'
   public reviews$: any
   public userSubscription: any
   public reviewControl: UntypedFormControl = new UntypedFormControl('', [Validators.maxLength(160)])

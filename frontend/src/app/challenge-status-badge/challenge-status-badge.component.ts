@@ -21,8 +21,8 @@ dom.watch()
   })
 export class ChallengeStatusBadgeComponent {
   @Input() public challenge: Challenge = { } as Challenge
-  @Input() public allowRepeatNotifications: boolean = false
-  @Input() public showChallengeHints: boolean = true
+  @Input() public allowRepeatNotifications = false
+  @Input() public showChallengeHints = true
 
   constructor (private readonly challengeService: ChallengeService, private readonly windowRefService: WindowRefService) { }
 

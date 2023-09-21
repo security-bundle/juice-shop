@@ -17,8 +17,8 @@ dom.watch()
   styleUrls: ['./basket.component.scss']
   })
 export class BasketComponent {
-  public productCount: number = 0
-  public bonus: number = 0
+  public productCount = 0
+  public bonus = 0
 
   constructor (private readonly router: Router, private readonly ngZone: NgZone) {}
 

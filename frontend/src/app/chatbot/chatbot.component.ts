@@ -39,8 +39,8 @@ interface MessageActions {
 export class ChatbotComponent implements OnInit {
   public messageControl: UntypedFormControl = new UntypedFormControl()
   public messages: ChatMessage[] = []
-  public juicyImageSrc: string = 'assets/public/images/ChatbotAvatar.png'
-  public profileImageSrc: string = 'assets/public/images/uploads/default.svg'
+  public juicyImageSrc = 'assets/public/images/ChatbotAvatar.png'
+  public profileImageSrc = 'assets/public/images/uploads/default.svg'
   public messageActions: MessageActions = {
     response: 'query',
     namequery: 'setname'

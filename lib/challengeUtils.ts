@@ -14,7 +14,7 @@ const notifications = require('../data/datacache').notifications
 const Entities = require('html-entities').AllHtmlEntities
 const entities = new Entities()
 
-export const solveIf = function (challenge: any, criteria: () => any, isRestore: boolean = false) {
+export const solveIf = function (challenge: any, criteria: () => any, isRestore = false) {
   if (notSolved(challenge) && criteria()) {
     solve(challenge, isRestore)
   }

@@ -21,7 +21,7 @@ const isGitpod = () => false
 
 const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 
-export const queryResultToJson = (data: any, status: string = 'success') => {
+export const queryResultToJson = (data: any, status = 'success') => {
   let wrappedData: any = {}
   if (data) {
     if (!data.length && data.dataValues) {

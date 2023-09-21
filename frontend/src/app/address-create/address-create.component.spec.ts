@@ -144,7 +144,7 @@ describe('AddressCreateComponent', () => {
   })
 
   it('pin code should not be more than 8 characters', () => {
-    let str: string = ''
+    let str = ''
     for (let i = 0; i < 9; ++i) {
       str += 'a'
     }
@@ -156,7 +156,7 @@ describe('AddressCreateComponent', () => {
   })
 
   it('address should not be more than 160 characters', () => {
-    let str: string = ''
+    let str = ''
     for (let i = 0; i < 161; ++i) {
       str += 'a'
     }

@@ -18,7 +18,7 @@ interface LineMarker {
   })
 export class CodeAreaComponent implements OnInit {
   @Input('code')
-  public code: string = ''
+  public code = ''
 
   @Input('vulnLines')
   public vulnLines: number[]
