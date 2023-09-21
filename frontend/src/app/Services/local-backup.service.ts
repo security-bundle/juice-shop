@@ -20,7 +20,7 @@ export class LocalBackupService {
 
   constructor (private readonly cookieService: CookieService, private readonly challengeService: ChallengeService, private readonly snackBarHelperService: SnackBarHelperService, private readonly snackBar: MatSnackBar) { }
 
-  save (fileName = 'owasp_juice_shop') {
+  save (fileName:string = 'owasp_juice_shop') {
     const backup: Backup = { version: this.VERSION }
 
     backup.scoreBoard = {
