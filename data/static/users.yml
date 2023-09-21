@@ -61,6 +61,7 @@
 -
   email: bender
   password: 'OhG0dPlease1nsertLiquor!'
+  password_match: 'OhG0dPlease1nsertLiquor!'
   key: bender
   role: 'customer'
   securityQuestion:
