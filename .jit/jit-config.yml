@@ -1,0 +1,7 @@
+applications:
+- api_domain: api.github.io
+  application_name: app name
+  authentication_mode: non-authenticated
+  exclude_paths: []
+  target_url: https://stklauz.github.io
+  type: web
