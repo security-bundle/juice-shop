@@ -5,3 +5,14 @@ applications:
   exclude_paths: []
   target_url: https://stklauz.github.io
   type: web
+deployment:
+  environments:
+  - ze miguel
+plan_items:
+  item-web-app-scanner:
+    deployment:
+      configuration:
+      - app name
+      tags:
+      - ze miguel
+      trigger: deployment
