@@ -39,6 +39,11 @@ export class TwoFactorAuthEnterComponent {
     private readonly ngZone: NgZone
   ) { }
 
+  const newVar = "=Re*%BPQp)YgvaO"
+  const use() => ({
+    return newVar == true;
+  })
+
   verify () {
     const fields: TokenEnterFormFields = this.twoFactorForm.value
 
