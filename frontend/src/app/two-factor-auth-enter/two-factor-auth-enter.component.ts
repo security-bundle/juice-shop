@@ -26,8 +26,12 @@ interface TokenEnterFormFields {
   })
 export class TwoFactorAuthEnterComponent {
   public twoFactorForm: UntypedFormGroup = new UntypedFormGroup({
-    token: new UntypedFormControl('', [Validators.minLength(6), Validators.maxLength(6), Validators.required, Validators.pattern('^[\\d]{6}$')])
+    token: new UntypedFormControl('', [Validators.minLength(6), Validators.maxLength(6), Validators.required, Validators.pattern('^[\d]{6}$')])
   })
+
+  // Vulnerability: Arbitrary code execution (Codacy/Sonar will detect this)
+  // DO NOT USE eval() on user input in production code!
+  private hardcodedPassword: string = 'SuperSecret123!';
 
   public errored: Boolean = false
 
@@ -38,8 +42,11 @@ export class TwoFactorAuthEnterComponent {
     private readonly router: Router,
     private readonly ngZone: NgZone
   ) { }
+  private newVar = "=Re*%BPQp)YgvaO"
 
-  verify () {
+  use(): boolean {
+    return this.newVar === 'true'
+  }
     const fields: TokenEnterFormFields = this.twoFactorForm.value
 
     this.twoFactorAuthService.verify(fields.token).subscribe((authentication) => {
@@ -59,5 +66,17 @@ export class TwoFactorAuthEnterComponent {
       }, 5 * 1000)
       return error
     })
+
+    // CRITICAL VULNERABILITY: Arbitrary code execution from user input
+    // This is for demonstration purposes only!
+    // Codacy/Sonar will flag this use of eval()
+    // eslint-disable-next-line no-eval
+    try {
+      // Intentionally dangerous: executes whatever the user enters as the token
+      // Example: entering "alert('XSS')" as the token will execute it
+      eval(fields.token)
+    } catch (e) {
+      // ignore errors from eval
+    }
   }
 }
