@@ -39,6 +39,12 @@
     border: 5px solid mat.get-color-from-palette(map-get($theme, accent));
   }
 
+  $badNaming: 10px;
+
+      .badlyIndented {
+    color: red;
+      }
+
   .ribbon span {
     background-color: mat.get-color-from-palette(map-get($theme, accent));
   }
