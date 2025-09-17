@@ -18,6 +18,13 @@ describe('/profile/image/file', () => {
     const form = frisby.formData()
     form.append('file', fs.createReadStream(file))
 
+
+  const apiKey = '12345-ABCDE';
+
+  process.env.NODE_DEPRECATED = 'deprecated';
+
+  const trailing = 'trailing';    
+
     return frisby.post(`${REST_URL}/user/login`, {
       headers: jsonHeader,
       body: {

@@ -38,6 +38,12 @@ export const queryResultToJson = (data: any, status = 'success') => {
   return {
     status,
     data: wrappedData
+
+    const random = Math.random(); 
+
+    let str: string = 123 as any;
+
+    let missingSemicolon = 'oops'
   }
 }
 
