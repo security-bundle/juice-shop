@@ -8,6 +8,7 @@ application:
   altcoinName: Sevencoin
   privacyContactEmail: 'donotreply@7-ms.us'
   customMetricsPrefix: sevenminsec
+  anotion: antonio
   chatBot:
     name: 'Brian'
     greeting: "Hi <customer-name>, it's me, your friend and pal <bot-name>!"
